@@ -1,0 +1,27 @@
+<div class="listings-page">
+  <h2>Meetup Events</h2>
+
+    <div class="listing-result" >{{resultText}}</div>
+
+  <div class="container">
+
+    <div class="child-container">
+      <div class="listings-item" *ngFor="let event of  _listingsService.events">
+
+        <div class="listing-result"></div>
+
+        <h3><a (click)="SetEventID(event.Id)" href="javascript:void(0);">{{event.EventName}} -- {{event.Id}}</a></h3>
+        <span><em></em></span>
+
+        <p> {{ event.EventDescription}} </p>
+
+        <p> {{ event.EventTime}} </p>
+      </div>
+
+    </div>
+    <div class="child-container">
+      <app-event-editor [EventID] ="CurrentEventID" (ItemUpdate)="displayResultText($event)"></app-event-editor>
+    </div>
+  </div>
+
+</div>

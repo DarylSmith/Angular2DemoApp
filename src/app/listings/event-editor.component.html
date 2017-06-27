@@ -1,0 +1,33 @@
+<div class="editor-component">
+
+  <div>
+
+    <label>Event Name </label>
+    <input type="text" [(ngModel)]="CurrentEvent.EventName"  />
+  </div>
+
+  <div>
+    <label>Event Description </label>
+    <input type="text" [(ngModel)]="CurrentEvent.EventDescription" />
+  </div>
+
+  <div>
+    <label>Event Time </label>
+    <input placeholder="yyyy/mm/dd" type="text" [(ngModel)]="CurrentEvent.EventTime" />
+  </div>
+
+  <div>
+    <label>Speaker </label>
+     <select [(ngModel)]="CurrentEvent.SpeakerId">
+    <option *ngFor="let speaker of Speakers"
+    [ngValue]="speaker.Id">{{speaker.FirstName}} {{speaker.LastName}}
+    </option>
+    </select>
+
+
+  </div>
+
+
+  <button (click)="modifyEvent()" >Submit</button>
+
+</div>

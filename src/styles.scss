@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+ typography
+html, body {
+  font-family: Lato, Arial, sans-serif !important;
+}
+
+// set root element font size (which all rem's are based from)
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+// typography classes
+h1 {
+  font-size: 56px;
+  font-size: 5.6rem ;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+h2  {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.container{
+
+    display: flex;
+    width: 1000px;
+    padding: 40px;
+
+    .child-container{
+
+      width:50%;
+    }
+}
+
+.listing-result{
+  color:red;
+  margin:10px 0px;
+}
+
+
+.listings-item{
+  margin-bottom:10px;
+
+  p{
+    margin-bottom:2px;
+  }
+}
+
+label{
+
+  display:inline-block;
+  margin-bottom:5px;
+}
+
